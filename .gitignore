@@ -1,0 +1,25 @@
+# Secrets — never commit real credentials
+.env
+.env.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated pipeline artifacts (scratch audio, manifests, cue sheets)
+output/
+
+# Local tooling installed by the Databricks AI Dev Kit
+.cursor/
+.ai-dev-kit/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store

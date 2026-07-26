@@ -1,0 +1,87 @@
+{
+  "title": "Halberd Street",
+  "form": "screenplay",
+  "purpose": "Possession, knowledge and location traps in screenplay format, with a near-miss beside each one.",
+  "notes": [
+    "Every planted fault sits next to a legitimate move of the same shape, so a",
+    "checker cannot score well by being suspicious of the shape alone.",
+    "The tape is contradicted in part three and then handed over properly in",
+    "part four; the lift is out of service, then genuinely repaired, then",
+    "ridden.",
+    "",
+    "Known gap this fixture exposes and the checker cannot yet close:",
+    "knowledge-reversal is a claim about the *past*. Mara says in part five",
+    "that she knew all along, which clashes with part one. But part four had",
+    "her learn it legitimately, so the part-one fact was superseded and is no",
+    "longer active — and only active facts are offered to the adjudicator.",
+    "Shown the fact directly the model calls it correctly every time, so this",
+    "is an architecture gap rather than a judgement failure: nothing looks at",
+    "retired facts when a draft makes a claim about how things always were."
+  ],
+  "traps": [
+    {
+      "id": "tape-possession",
+      "part": 3,
+      "expect": "contradiction",
+      "match": ["tape", "cassette", "copy"],
+      "why": "Mara states there is one tape and keeps it in her cistern. Dev plays it in his car, having never been given it."
+    },
+    {
+      "id": "knowledge-reversal",
+      "part": 5,
+      "expect": "contradiction",
+      "match": ["knew", "know", "police"],
+      "why": "Part one has Mara not knowing Dev from the wall, and part two has her never having looked at him. In part five she claims she knew from the first night."
+    },
+    {
+      "id": "who-called-it-in",
+      "part": 5,
+      "expect": "dangling_question",
+      "match": ["call"],
+      "why": "Dev asks who called it in three weeks ago in part one. Part five asks it again. Nothing has answered it."
+    },
+    {
+      "id": "voice-on-the-tape",
+      "part": 5,
+      "expect": "dangling_question",
+      "match": ["tape", "voice", "identity", "speaking"],
+      "why": "Who is speaking on the tape is never established. Added after the grader raised it and was right to: the fixture was under-specified, not the checker over-firing."
+    }
+  ],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 1,
+      "why": "The story deliberately ends with Mrs Paris unexplained, so one further open thread at the end is the story working."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "legitimate-handover",
+      "part": 4,
+      "why": "Mara gives Dev the cassette on the page. An object changing hands with the transfer shown is a supersession, not a contradiction."
+    },
+    {
+      "id": "lift-repaired-then-ridden",
+      "part": 5,
+      "why": "The lift is out of service from part two, repaired on the page in part four, and ridden in part five. Flagging the ride means supersession is not being consulted."
+    },
+    {
+      "id": "mrs-paris-listening",
+      "part": 3,
+      "why": "Mrs Paris going up to listen and then crossing to the car is suspicious but contradicts nothing established."
+    }
+  ],
+  "expect_superseded": [
+    {
+      "by_part": 4,
+      "about": "lift",
+      "why": "The lift is repaired on the page, so out-of-service should stop being true."
+    },
+    {
+      "by_part": 4,
+      "about": "cassette",
+      "why": "The cassette passes from Mara to Dev."
+    }
+  ]
+}

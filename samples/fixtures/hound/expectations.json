@@ -1,0 +1,25 @@
+{
+  "title": "The Hound of the Baskervilles (trimmed)",
+  "form": "prose",
+  "purpose": "Real mystery control. Holmes and Watson establish a case; unanswered questions are intentional, not bugs.",
+  "notes": [
+    "Gutenberg excerpt: opening chapters trimmed to ~900 words each.",
+    "Dr Mortimer's stick, the Baskerville legend setup — none of this should raise contradictions.",
+    "If the checker flags Holmes being late, or Watson guessing about a visitor, that is a false positive of the 'absence/inference' family."
+  ],
+  "traps": [],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 3,
+      "why": "A detective opening is supposed to open threads: whose stick, what danger, who inherits."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "holmes-deduction-not-contradiction",
+      "part": 2,
+      "why": "Holmes correcting Watson's inferences is the story working, not a canon clash."
+    }
+  ]
+}

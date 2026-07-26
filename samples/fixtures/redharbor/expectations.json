@@ -1,0 +1,64 @@
+{
+  "title": "Redharbor",
+  "form": "prose",
+  "purpose": "New adversarial fixture: destroyed object reused, character in two places, unearned knowledge of a sealed hold, plus a planted open signature thread.",
+  "notes": [
+    "Every planted fault sits next to a legitimate move: the hold is properly",
+    "unlocked on the page before inspection; a cracked compass sitting in a",
+    "saucer later is consistent with part two."
+  ],
+  "traps": [
+    {
+      "id": "compass-destroyed-then-used",
+      "part": 4,
+      "expect": "contradiction",
+      "match": ["compass"],
+      "why": "Part two smashes Ella's brass compass. Part four has her take a bearing with it, glass whole."
+    },
+    {
+      "id": "ella-two-places",
+      "part": 4,
+      "expect": "contradiction",
+      "match": ["Ella", "quay", "Lythe", "Saturday", "back", "Thursday", "left", "return"],
+      "why": "Part three sends Ella inland until Saturday. Part four has her on the quay Thursday night."
+    },
+    {
+      "id": "hold-knowledge",
+      "part": 4,
+      "expect": "contradiction",
+      "match": ["hold", "crate", "beef", "Cael", "stack"],
+      "why": "The hold was sealed until Briggs opens it for customs. Cael describes the crate layout as if he has already seen inside."
+    },
+    {
+      "id": "who-signed",
+      "part": 5,
+      "expect": "dangling_question",
+      "match": ["sign", "seal", "authority", "paper", "deferral"],
+      "why": "Part one asks who ordered the seal and on whose paper. Part five still has no answer — only a stranger's signature on a deferral."
+    }
+  ],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 2,
+      "why": "Seal authority and signature may be recorded as two related threads; both are real debts."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "cael-on-hatch",
+      "part": 3,
+      "why": "Cael sitting on the sealed hatch is not opening it. Proximity is not a contradiction of the seal."
+    },
+    {
+      "id": "legitimate-unlock",
+      "part": 4,
+      "why": "Briggs unlocks the hold on the page for the customs man. That is supersession, not a contradiction of the seal."
+    },
+    {
+      "id": "cracked-compass-on-shelf",
+      "part": 5,
+      "why": "Finding the cracked pieces in the saucer agrees with part two. Do not flag it as a clash with the false whole compass in part four's hallucination — or if you do, only via the part-four trap already declared."
+    }
+  ]
+}

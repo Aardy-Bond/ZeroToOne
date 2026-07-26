@@ -1,25 +1,54 @@
 # Secrets — never commit real credentials
 .env
 .env.local
+.env.*
+!.env.example
 
 # Python
 .venv/
 venv/
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 
 # Generated pipeline artifacts (scratch audio, manifests, cue sheets)
-output/
+output/*
+!output/.gitkeep
 
-# Local tooling installed by the Databricks AI Dev Kit
+# Local story DB (SQLite). Not source — recreate on the app host.
+projects/*.db
+projects/*.db-wal
+projects/*.db-shm
+projects/*.db-journal
+
+# Keep the trained quality prior for deploy; ignore other model junk.
+models/*
+!models/quality_prior.joblib
+!models/quality_prior.meta.json
+
+# Hugging Face / training caches
+.cache/
+data/hf_cache/
+
+# Public-domain corpus fetched on demand (not needed at runtime)
+data/gutenberg/
+samples/corpus/
+
+# Local tooling / editors
 .cursor/
 .ai-dev-kit/
-
-# Editor / OS
 .idea/
 .vscode/
 .DS_Store
+*.swp
+*~
+
+# Deploy / OS noise
+.databricks/
+*.log

@@ -1,0 +1,62 @@
+{
+  "title": "The Kestrel Light",
+  "form": "prose",
+  "purpose": "The original adversarial fixture. Prose written in full at samples/kestrel/, with the reasoning in EXPECTED.md.",
+  "parts_from": "../../kestrel",
+  "notes": [
+    "The premature reference to the second key is deliberately unreachable in",
+    "the sequential phase: when part three is checked, part five has not been",
+    "written, so the fact it trips over does not exist yet. It is graded in the",
+    "recheck phase instead, where the whole story is on the page."
+  ],
+  "traps": [
+    {
+      "id": "swim",
+      "part": 6,
+      "expect": "contradiction",
+      "match": ["swim", "swam", "sea"],
+      "why": "Part one states plainly that Ilse cannot swim and backs it with a childhood near-drowning. Part six has her bring in four men."
+    },
+    {
+      "id": "second-key",
+      "part": 5,
+      "expect": "contradiction",
+      "match": ["key"],
+      "why": "Part one says there was one key and it was the one on her belt. Part five finds another, cut before her appointment."
+    },
+    {
+      "id": "manifest-signature",
+      "part": 6,
+      "expect": "dangling_question",
+      "match": ["sign", "manifest"],
+      "why": "Part two asks who signed the manifest, underlined, and nothing ever answers it."
+    }
+  ],
+  "retired_traps": [
+    {
+      "id": "second-key-premature",
+      "why": "Part three lists the second key as though the reader knows it, and it is not found until part five. This is a genuine fault in the prose, but it is not one this checker can find, and pretending otherwise would keep a permanently red score for a capability that does not exist. A writer moving forward cannot reference their own future, because the later fact has not been written yet; the reference only becomes visible on a re-examination of part three, and graded that way the check produced four wrong answers for every right one. Same-timeline premature detection was removed rather than tuned. Catching this properly needs the draft's own introductions to be extracted and subtracted, which is a bigger change than a threshold."
+    }
+  ],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 3,
+      "why": "A lighthouse mystery is meant to owe the reader things. Beyond the manifest signature the story also leaves the bell, the coat and the second key hanging, and being told so is correct. Three is the cap the checker itself reports, so this tolerates a full panel."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "roll-call",
+      "part": 4,
+      "why": "The harbour master calls Anselm Vary at a roll and a young man answers. It is his son, made explicit two lines later. A permanent fact about a dead man plus a later use of the name is exactly the shape the adjudicator has over-fired on."
+    }
+  ],
+  "expect_superseded": [
+    {
+      "by_part": 4,
+      "about": "ledger",
+      "why": "The ledger goes missing and is found again inside part four, so missing must not survive as an active fact."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "The Turn of the Screw (trimmed)",
+  "form": "prose",
+  "purpose": "Real ambiguous control. James withholds certainty on purpose; the checker must not invent contradictions from unreliable narration.",
+  "notes": [
+    "Gutenberg excerpt trimmed. Ambiguity is the point of the novel.",
+    "Do not treat the governess's fears, or the children's odd behaviour, as hard fact clashes unless the text states two incompatible standing conditions."
+  ],
+  "traps": [],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 3,
+      "why": "Who hired her, what happened to the prior governess, what the children know — all deliberately open."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "ambiguity-is-not-a-plot-hole",
+      "part": 2,
+      "why": "Unreliable or incomplete perception is craft, not a continuity error."
+    }
+  ]
+}

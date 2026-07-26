@@ -3,4 +3,30 @@ openai>=1.40.0
 plotly>=5.20.0
 pydantic>=2.7.0
 python-dotenv>=1.0.0
+
+# st.navigation, used by the multi-page shell, needs 1.36 or newer.
 streamlit>=1.49.0
+
+# Exact cosine ranking over the local fact ledger. Brute force beats an
+# approximate index at a few hundred facts, and cannot silently miss one.
+numpy>=1.26.0
+
+# Narrative quality prior: training script and artifact inference.
+scikit-learn>=1.5.0
+joblib>=1.4.0
+datasets>=2.19.0
+
+# Offline test suite (no network, no API calls).
+pytest>=8.0.0
+
+# Optional, and off by default on purpose. Installing these and caching
+# SamLowe/roberta-base-go_emotions lets the emotion layer corroborate the Scene
+# DNA reading with a pre-trained GoEmotions classifier. Several GB.
+#
+# Measured on this repo's sample, the classifier adds evidence on roughly three
+# scenes in seven and changes no forecast conclusion, because GoEmotions reads
+# first-person Reddit affect rather than narrative affect. Worth enabling to
+# corroborate, not worth the download to run the product. See README
+# "Limitations". The engine degrades gracefully without them.
+# transformers>=4.40.0
+# torch>=2.2.0

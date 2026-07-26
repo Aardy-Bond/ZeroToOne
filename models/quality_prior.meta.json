@@ -1,0 +1,31 @@
+{
+  "model_version": "qp-1-20260725",
+  "feature_version": "qp-1",
+  "dataset": "lars1234/story_writing_benchmark",
+  "dataset_config": "average",
+  "dataset_license": "MIT",
+  "label": "overall_score",
+  "language_filter": "en",
+  "trained_at": "2026-07-25T21:02:09.961864+00:00",
+  "sample_count": 2784,
+  "test_count": 696,
+  "label_min": 1.671875,
+  "label_max": 3.78125,
+  "r2": 0.4298,
+  "mae": 0.1249,
+  "baseline_mae": 0.1674,
+  "estimator": "TfidfVectorizer(1,2) + Ridge(alpha=1.0)",
+  "top_contributors": [
+    "ve",
+    "gaze",
+    "or",
+    "boy",
+    "voice",
+    "re",
+    "familiar",
+    "at",
+    "not",
+    "just"
+  ],
+  "caveat": "Predicts rated story quality on LLM-written short fiction. Not a retention label. Contains no listener behaviour."
+}

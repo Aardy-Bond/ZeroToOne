@@ -1,0 +1,16 @@
+# Databricks Apps — Anubhuti (Streamlit)
+# OPENAI_API_KEY is injected from the app resource `openai-api-key`
+# (Databricks secret scope anubhuti-app / key openai_api_key).
+
+command:
+  - "streamlit"
+  - "run"
+  - "src/dashboard/app.py"
+  - "--server.headless=true"
+  - "--browser.gatherUsageStats=false"
+
+env:
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
+  - name: OPENAI_API_KEY
+    valueFrom: openai-api-key

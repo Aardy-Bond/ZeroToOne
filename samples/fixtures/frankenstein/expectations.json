@@ -1,0 +1,25 @@
+{
+  "title": "Frankenstein (trimmed letters)",
+  "form": "prose",
+  "purpose": "Real public-domain control. Walton's Arctic letters are coherent; the checker should stay quiet except for mysteries the text itself opens.",
+  "notes": [
+    "Taken from Gutenberg Frankenstein, Letters 1–2, trimmed to ~900 words each.",
+    "No planted faults. False positives here mean the tool cannot be trusted on literary prose.",
+    "Expect open threads about Walton's voyage and the stranger he will meet — those are the novel's job."
+  ],
+  "traps": [],
+  "tolerate": [
+    {
+      "kind": "dangling_question",
+      "up_to": 3,
+      "why": "Epistolary openings are allowed to withhold who the stranger is and how the voyage ends."
+    }
+  ],
+  "must_not_fire": [
+    {
+      "id": "arctic-travel-ok",
+      "part": 2,
+      "why": "Continuing north, hiring a ship, and writing home are consistent with Letter 1. Do not treat travel progress as a contradiction of earlier plans."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "The Ferry at Ardmore",
+  "form": "prose",
+  "purpose": "The control. Nothing is wrong with this story. Every finding is a false positive.",
+  "notes": [
+    "It is full of shapes that have made the checker fire before: a dead man",
+    "who speaks at length in a remembered scene, an object that changes hands",
+    "for a good reason, a question asked in part one and answered in part four,",
+    "and a detail (four minutes) that recurs in three parts meaning something",
+    "different each time.",
+    "A plot-hole finder that cannot stay quiet here is not usable, because a",
+    "writer who is warned about a working story stops reading the warnings."
+  ],
+  "traps": [],
+  "expect_threads_closed": [
+    {
+      "by_part": 4,
+      "about": "bicycle",
+      "why": "Aoife Trant claims it, so the thread opened in part one should close."
+    }
+  ],
+  "expect_superseded": [
+    {
+      "by_part": 3,
+      "about": "watch",
+      "why": "Nuala gives her father's watch to Cathal, so she no longer has it."
+    }
+  ]
+}

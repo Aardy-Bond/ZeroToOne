@@ -1,0 +1,21 @@
+# Paths to skip when uploading to Databricks Workspace (import-dir / manual zip).
+# Keep this next to app.yaml as a checklist — CLI import-dir does not read it
+# automatically; exclude these yourself or run scripts/prepare_deploy.sh.
+.venv
+.git
+.cursor
+.ai-dev-kit
+.pytest_cache
+__pycache__
+.env
+.env.local
+output
+projects/*.db
+projects/*.db-wal
+projects/*.db-shm
+data/gutenberg
+samples/corpus
+data/hf_cache
+.cache
+*.pyc
+.DS_Store

@@ -11,6 +11,7 @@ Run with:
 
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -27,6 +28,16 @@ if str(SRC_DIR) not in sys.path:
 from dotenv import load_dotenv  # noqa: E402
 
 load_dotenv(PROJECT_ROOT / ".env")
+
+# Streamlit Community Cloud injects secrets via st.secrets, not .env.
+# Copy flat string secrets into the environment so the rest of the app
+# can keep using os.getenv("OPENAI_API_KEY") etc.
+try:
+    for _key, _value in st.secrets.items():
+        if isinstance(_value, str) and _key not in os.environ:
+            os.environ[_key] = _value
+except Exception:
+    pass
 
 from dashboard import brand, state, theme  # noqa: E402
 from dashboard.views import library, production, settings, timeline, workspace  # noqa: E402
